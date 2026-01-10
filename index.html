@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>CUCUBOLA - Situs Resmi</title>
+<meta name="description" content="CUCUBOLA situs resmi. Main bola, slot, live games terpercaya hanya di #Cucubola">
+<meta name="author" content="Cucubola Official">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://Cucubola.com/">
+
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#3a2f25,#7c674f);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  color:#fff;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(8px);
+  border-radius:22px;
+  padding:32px 24px;
+  box-shadow:0 18px 45px rgba(0,0,0,.4);
+  text-align:center;
+}
+
+.logo{
+  width:110px;
+  margin-bottom:14px;
+}
+
+h1{
+  font-size:30px;
+  font-weight:600;
+  color:#ffd36b;
+}
+
+h2{
+  font-size:14px;
+  font-weight:300;
+  opacity:.85;
+  margin-bottom:10px;
+}
+
+.divider{
+  width:70%;
+  height:2px;
+  margin:16px auto;
+  background:linear-gradient(to right,transparent,#ffd36b,transparent);
+}
+
+.info{
+  font-size:14px;
+  margin-bottom:18px;
+  color:#ffe6a6;
+  line-height:1.6;
+}
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.menu a{
+  padding:14px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#ffd36b,#e6b950);
+  color:#3a2f25;
+  text-decoration:none;
+  font-weight:600;
+  transition:.35s;
+}
+
+.menu a.primary{
+  position:relative;
+  overflow:hidden;
+  font-size:16px;
+  animation:glowPulse 3.5s infinite;
+}
+
+.menu a.primary::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:translateX(-120%);
+  animation:shimmer 4s infinite;
+}
+
+.menu a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,.3);
+}
+
+/* ikon kecil */
+.menu a span.icon{
+  margin-right:8px;
+  font-size:15px;
+  display:inline-block;
+  transform:translateY(1px);
+  opacity:.85;
+}
+
+@keyframes shimmer{
+  0%{transform:translateX(-120%)}
+  50%{transform:translateX(120%)}
+  100%{transform:translateX(120%)}
+}
+
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 0 rgba(255,211,107,0)}
+  50%{box-shadow:0 0 26px rgba(255,211,107,.5)}
+}
+
+footer{
+  margin-top:26px;
+  font-size:12px;
+  color:#ffd36b;
+  opacity:.85;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal-box{
+  background:rgba(0,0,0,.9);
+  padding:26px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(255,211,107,.45);
+}
+
+.modal-box h3{
+  color:#ffd36b;
+  margin-bottom:10px;
+}
+
+.modal-box p{
+  color:#ffe6a6;
+  margin-bottom:18px;
+}
+
+.modal-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+
+.btn-ok{
+  padding:12px 22px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ffd36b,#e6b950);
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-ok:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.btn-cancel{
+  padding:12px 22px;
+  border-radius:14px;
+  background:rgba(255,255,255,.15);
+  color:#ffd36b;
+  border:none;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MODAL -->
+<div id="confirmModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>⚠️ PERHATIAN </h3>
+    <p>
+      saat pilih <strong>DAFTAR</strong><br>
+      Pastikan REFERRAL<br>
+      <strong>ANSHUN168</strong>
+    </p>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeConfirm()">BATAL</button>
+      <button id="btnNext" class="btn-ok" disabled>LANJUT (3)</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+<img src="goat-logo.png" class="logo" alt="LIGABANDIT">
+
+<h1>CUCUBOLA</h1>
+<h2>Situs Resmi Cucubola dengan Referral</h2>
+
+<div class="info">
+“Berani Masuk, Cerdik Bermain, Menang Sebagai Legenda”
+</div>
+
+<div class="divider"></div>
+
+<div class="info">
+Minimal Depo Rp10.000 <strong>dan WD Rp50.000</strong><br>
+</div>
+
+<div class="menu">
+  <a class="primary" href="#" onclick="openConfirm('https://ligabandot31808.com/?referralid=anshun168')">
+    <span class="icon"></span> DAFTAR AKUN BARU
+  </a>
+
+  <a href="https://ligabandot31935.com/?referralid=anshun168" target="_blank">
+    <span class="icon"></span> LOGIN
+  </a>
+  <a href="https://ligabandot39101.com/?referralid=anshun168" target="_blank">
+    <span class="icon"></span> LOGIN / DAFTAR 1
+  </a>
+  <a href="https://ligabandot81045.com/?referralid=anshun168" target="_blank">
+    <span class="icon"></span> LOGIN / DAFTAR 2
+  </a>
+
+  <a href="https://ligabandot31808.com/blog/?title=PREDIKSI%20BOLA" target="_blank">
+    <span class="icon">⚽</span> PREDIKSI BOLA
+  </a>
+  <a href="https://ligabandot31808.com/rtp/" target="_blank">
+    <span class="icon"></span> RTP SLOT
+  </a>
+  <a href="https://direct.lc.chat/19244517" target="_blank">
+    <span class="icon"></span> LIVE CHAT ADMIN
+  </a>
+  <a href="https://Cucubola.com" target="_blank">
+    <span class="icon"></span> WA 0812.66666.347
+  </a>
+</div>
+
+<footer>© 2026 Cucubola.com — all rights reserved</footer>
+</div>
+
+<script>
+let nextUrl='';
+let timeLeft=3;
+let timer;
+
+function openConfirm(url){
+  nextUrl=url;
+  timeLeft=3;
+  const btn=document.getElementById('btnNext');
+  btn.disabled=true;
+  btn.textContent=`LANJUT (${timeLeft})`;
+  document.getElementById('confirmModal').style.display='flex';
+
+  timer=setInterval(()=>{
+    timeLeft--;
+    btn.textContent=`LANJUT (${timeLeft})`;
+    if(timeLeft<=0){
+      clearInterval(timer);
+      btn.disabled=false;
+      btn.textContent='LANJUT DAFTAR';
+      btn.onclick=goNext;
+    }
+  },1000);
+}
+
+function closeConfirm(){
+  clearInterval(timer);
+  document.getElementById('confirmModal').style.display='none';
+}
+
+function goNext(){
+  window.open(nextUrl,'_blank');
+  closeConfirm();
+}
+</script>
+
+</body>
+</html>
